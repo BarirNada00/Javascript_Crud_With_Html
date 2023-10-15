@@ -31,7 +31,7 @@ function insertNewClient(data) {
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var address = document.getElementById("address").value;
-    if(!name || !email || !phone || ! address){// barre verticale altgr + 6
+    if(!name || !email || !phone || ! address){
         alert("all fileds are required !");
         return;
     }
@@ -47,7 +47,7 @@ function insertNewClient(data) {
 		cell4.innerHTML = data.address;
     cell4 = newRow.insertCell(4);
         cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
-      //"" '' or `` on l'ai fait par alt gr + 7 single double écrite ds une seule ligne les autres en 2 lignes split them on multiple lines
+      
 }
 
 //Edit the data
@@ -82,4 +82,3 @@ function resetForm() {
     document.getElementById("address").value = '';
     selectedRow = null;
 }
-// td this event.preventDefault??
